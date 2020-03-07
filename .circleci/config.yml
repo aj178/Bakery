@@ -8,12 +8,13 @@ jobs:
     executor: python/default
     steps:
       - checkout
-      - python/load-cache
-      - python/install-deps
-      - python/save-cache
-      - run:
-          command: ./manage.py test
-          name: Test
+      - run: virtualenv venv
+      - run: source venv/bin/activate
+      - run: pip install pybuilder
+      - run: pyb clean
+      - run: pyb -v
+      - run: pip install target/dist/Bakery-1.0.dev0/dist/Bakery-1.0.dev0.tar.gz
+      - run: python ~/src/unittest/python/bakery_tests.py
 
 workflows:
   main:

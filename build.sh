@@ -1,6 +1,6 @@
 #!/usr/bin/venv bash
 virtualenv venv
-source venv/bin/activate
+source venv/bin/activate	
 pip install pybuilder
 pyb clean
 pyb -v
