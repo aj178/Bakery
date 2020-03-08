@@ -8,14 +8,9 @@ jobs:
     executor: python/default
     steps:
       - checkout
-      - run: virtualenv venv
-      - run: source venv/bin/activate
       - run: pip install pybuilder --pre pybuilder
       - run: pyb clean
       - run: pyb -v
-      - run: pip install target/dist/Bakery-1.0.dev0/dist/Bakery-1.0.dev0.tar.gz
-      - run: python ~/src/unittest/python/bakery_tests.py
-
 workflows:
   main:
     jobs:
