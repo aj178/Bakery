@@ -39,11 +39,11 @@ class test_bakery(unittest.TestCase):
         redundant_code_input = bakery.place_order("10 VS5\n13 CF\n 10 VS5")
         self.assertEqual(redundant_code_input, ['17.98', '25.85', '17.98'])
 
-    def test_three_order_input(self):
+    '''def test_three_order_input(self):
         bakery = Bakery()
         one_code_input = bakery.place_order("58 VS5\n49 MB11\n37 CF")
         self.assertEqual(one_code_input, ['105.88', '157.60', '70.87'])
-
+'''
 
 if __name__ == '__main__':
     unittest.main()
