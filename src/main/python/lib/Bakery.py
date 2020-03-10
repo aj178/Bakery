@@ -13,7 +13,7 @@ class Bakery:
         self.total_cost = []
 
     def place_order(self, target):
-        if target is '':
+        if target == '':
             return "order empty"
         else:
             orders = target.splitlines()
