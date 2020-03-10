@@ -8,7 +8,7 @@ class print_bill:
         :param cost: total cost for the item that has ordered.
         :param package: package shows how the quantity is broken down different packs.
         """
-        print quantity, code, "$" + str(cost)
+        print(quantity, code, "$" + str(cost))
         if code == "VS5":
             if package.count(3):
                 print("\t", str(package.count(3)) + " * 3 $6.99")
