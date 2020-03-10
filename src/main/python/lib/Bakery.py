@@ -41,10 +41,10 @@ class Bakery:
                         self.total_cost.append(cost_croissant)
                         print_bill().bill_print(quantity, code, cost_croissant, package_croissant)
                     else:
-                        print "Invalid code"
+                        print("Invalid code")
                         return "Invalid code"
                 except:
-                    print "Invalid quantity"
+                    print("Invalid quantity")
                     return "Invalid quantity"
         return self.total_cost
 
